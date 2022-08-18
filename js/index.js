@@ -1,14 +1,22 @@
-document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("autos").addEventListener("click", function() {
-        localStorage.setItem("catID", 101);
-        window.location = "products.html"
-    });
-    document.getElementById("juguetes").addEventListener("click", function() {
-        localStorage.setItem("catID", 102);
-        window.location = "products.html"
-    });
-    document.getElementById("muebles").addEventListener("click", function() {
-        localStorage.setItem("catID", 103);
-        window.location = "products.html"
-    });
-});
+function validate(){
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    if ( username == "admin" && password == "admin" ) {
+        alert ("Ingreso exitoso");
+        window.location ="file:///C:/Users/Irina/Desktop/Curso%20de%20Programacion/FASE%202/GitHub/workspace-inicial/login.html";
+        return true;
+    } else {
+        attempt --;
+        alert ("Reintentar");
+        if ( attempt ==0 ) {
+        document.getElementById("username").disabled==true;
+        document.getElementById("password").disabled==true;
+        document.getElementById("submit").disabled==true;
+        return false;
+        }
+    }
+}
+
+
+
+    
