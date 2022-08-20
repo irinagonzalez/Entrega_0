@@ -1,18 +1,17 @@
 document.addEventListener ("DOMContentLoaded", function() {
-    let username = document.getElementById("inputusername").value;
+    let email = document.getElementById("inputemail").value;
     let password = document.getElementById("inputpassword").value;
     let correcto = true;
     
-    if (username == "") {
-        alert ("Completar informacion solicitada");
+    if (email == " ") {
         correcto = false;
     }
-    if (password == "") {
-        alert ("Completar informacion solicitada");
+    if (password == " ") {
         correcto = false;
+        alert (Datos incorrectos);
     }
 
     if (correcto) {
-        window.location.href= "index.html"
+        window.location.href= "login.html"
     } 
 });
